@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+    <style>
+        /* Remove default link styling */
+        a,span  {
+            text-decoration: none;
+            color: black; /* Default color (black) for normal font */
+            font-family: sans-serif; /* Use a simple, default sans-serif font */
+            font-weight: normal; /* Make sure the font weight is normal */
+        }
+    </style>
+    
+</head>
+<body>
+        <span>Hom</span><pre style="display: -webkit-inline-box;margin-block-start: auto;"><% files.forEach(file => { %>
+            <a href="/download/<%= file.name %>" download><%= file.name.split('.').slice(0, -1).join('.') %></a>
+    <% }); %>
+    </pre>
+        
+</body>
+</html>
